@@ -5,21 +5,22 @@ using namespace std;
 #define ll long long
 #define all(v) v.begin(),v.end()
 #define pb push_back
-void solve(){
+int main(){
     sarah();
     int n;
     cin>>n;
-    while(n--)
-    {
-        int a,b;
-        cin>>a>>b;
-        if(a<=2)cout<<1<<endl;
-        else cout<<1+(a-2+b-1)/b<<endl;
+    while(n--){
+        int a;
+        cin>>a;
+        string s;
+        cin>>s;
+        int max=0;
+        int k;
+        for(int i=0;i<s.size();i++){
+            k=s[i]-'a'+1;
+            if(k>max)max=k;
+        }
+        cout<<max<<endl;
     }
-
-}
-
-int main(){
-    solve();
     return 0;
 }

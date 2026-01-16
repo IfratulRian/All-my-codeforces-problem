@@ -5,21 +5,19 @@ using namespace std;
 #define ll long long
 #define all(v) v.begin(),v.end()
 #define pb push_back
-void solve(){
+int main(){
     sarah();
     int n;
     cin>>n;
-    while(n--)
-    {
-        int a,b;
-        cin>>a>>b;
-        if(a<=2)cout<<1<<endl;
-        else cout<<1+(a-2+b-1)/b<<endl;
+    string yes="yes";
+    while(n--){
+        string str;
+        cin>>str;
+        for(int i=0;i<str.size();i++){
+            str[i]=tolower(str[i]);
+        }
+        if(str==yes)cout<<"YES"<<endl;
+        else cout<<"NO"<<endl;
     }
-
-}
-
-int main(){
-    solve();
     return 0;
 }

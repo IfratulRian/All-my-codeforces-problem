@@ -11,10 +11,17 @@ void solve(){
     cin>>n;
     while(n--)
     {
-        int a,b;
-        cin>>a>>b;
-        if(a<=2)cout<<1<<endl;
-        else cout<<1+(a-2+b-1)/b<<endl;
+        string s;
+        char c;
+        cin>>s>>c;
+        int f=0;
+        for(int i=0;i<s.size();i+=2){
+            if(s[i]==c){
+                f=1;
+                break;
+            }
+        }
+        cout<<(f==1?"YES":"NO")<<endl;
     }
 
 }

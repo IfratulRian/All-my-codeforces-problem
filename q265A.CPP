@@ -7,18 +7,17 @@ using namespace std;
 #define pb push_back
 void solve(){
     sarah();
-    int n;
-    cin>>n;
-    while(n--)
-    {
-        int a,b;
-        cin>>a>>b;
-        if(a<=2)cout<<1<<endl;
-        else cout<<1+(a-2+b-1)/b<<endl;
+    string s1,s2;
+    cin>>s1>>s2;
+    int count=1;
+    for(int i=0,j=0;i<s2.size();i++){
+        if(s1[j]==s2[i]){
+            count++;
+            j++;
+        }
     }
-
+    cout<<count<<endl;
 }
-
 int main(){
     solve();
     return 0;
